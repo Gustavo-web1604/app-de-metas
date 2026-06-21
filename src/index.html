@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>App de Metas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>App de Metas</h1>
+    </header>
+
+    <div id="mensagem" class="mensagem oculto"></div>
+
+    <section class="cadastro">
+        <input type="text" id="inputMeta" placeholder="Digite uma nova meta..." maxlength="120">
+        <button id="btnAdicionar">Adicionar</button>
+    </section>
+
+    <nav class="abas">
+        <button class="aba-btn ativa" data-aba="todas">Todas</button>
+        <button class="aba-btn" data-aba="realizadas">Realizadas</button>
+        <button class="aba-btn" data-aba="abertas">Abertas</button>
+    </nav>
+
+    <main>
+        <ul id="listaMetas"></ul>
+        <p id="listaVazia" class="vazio oculto">Nenhuma meta aqui ainda.</p>
+    </main>
+
+    <footer>
+        <span id="contador"></span>
+    </footer>
+
+    <template id="templateMeta">
+        <li class="meta-item">
+            <label>
+                <input type="checkbox" class="meta-checkbox">
+                <span class="meta-texto"></span>
+            </label>
+            <button class="btn-deletar" title="Deletar meta">🗑️</button>
+        </li>
+    </template>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

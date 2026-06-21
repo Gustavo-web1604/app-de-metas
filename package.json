@@ -1,0 +1,33 @@
+{
+  "name": "app-de-metas",
+  "version": "1.0.0",
+  "description": "App de metas - versão desktop com Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.gustavo.appdemetas",
+    "productName": "App de Metas",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "metas.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
